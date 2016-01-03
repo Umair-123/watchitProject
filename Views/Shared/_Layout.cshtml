@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="Content/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    
+</head>
+<body>
+    @RenderBody()
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+    
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery-1.9.1.min.js"></script>
+    
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <form class="navbar-form navbar-right" role="search" >
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search Movies"/>
+            </div>
+            <button type="submit" class="btn btn-default">Search</button>
+            <a type="button" class="btn btn-default btn-lg" href="@Url.Action("Login", "Home")" >Login</a>
+        </form>
+        
+    </div>
+    </nav>
+   
+
+    <nav class="navbar navbar-default ">
+        <div class="container">
+            <h2>Its Footer</h2>
+        </div>
+    </nav>
+</body>
+</html>
