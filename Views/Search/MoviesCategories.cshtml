@@ -1,5 +1,46 @@
 ﻿@{
-    ViewBag.Title = "MoviesCategories";
+    ViewBag.Title = "Movies";
 }
 
+<!-- Movies -->
+	<div id="_moviesDetails" style="padding-top:100px">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-2">
+					<ul class="nav nav-pills nav-stacked">
+					  <li role="presentation" class="active"><a href="#">Action</a></li>
+					  <li role="presentation" ><a href="#">Romantic</a></li>
+					  <li role="presentation"><a href="#">Horror</a></li>
+					  <li role="presentation"><a href="#">Fiction</a></li>
+					</ul>
+				</div>
+               
+				<div class="col-md-10" >
+                     @foreach(var q in Model)
+                     {
+					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+					  <div class="panel panel-default ">
+					    <div class="panel-heading" role="tab" id="headingOne">
+					      <h4 class="panel-title">@q.Title</h4>
+					        
+					          <img src="" class="bzns-profile img-circle">
+					          <h3>Directed By <small>@q.Director</small></h3>
+					          <img class="pull-left stars" src="">
+					          <span>4/5 <span>100,435,909 Reviews</span></span>
+					          <p>
+					          	Great Movie
+					          </p>
+					      
+					    </div>
 
+					    
+					  </div>
+					</div>
+                     }    
+				</div>
+                
+			</div>
+		</div>
+	</div>
+
+	<!-- /Top Businesses -->
