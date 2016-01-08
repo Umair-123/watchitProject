@@ -19,6 +19,10 @@ namespace WatchIt.Controllers
         {
             return View();
         }
+        public ActionResult SuccessfulAdmin()
+        {
+            return View();
+        }
         public ActionResult Register()
         {
             return View();
@@ -26,6 +30,7 @@ namespace WatchIt.Controllers
         [HttpPost]
         public ActionResult LoginCheck(User us )
         {
+            var type= Request["optradio"];
             //User us = new User();
             //us.UserName=Request["email"];
             //us.Password=Request["password"];
@@ -33,11 +38,18 @@ namespace WatchIt.Controllers
             var usr = from x in db.Users
                       where (x.UserName == us.UserName && x.Password == us.Password)
                       select x;
-            Console.WriteLine(usr.Count());
+            
             
             if (usr != null )
             {
-                return RedirectToAction("Successful");   
+                if (type.ToString() == "User")
+                {
+                    return RedirectToAction("Successful");
+                }
+                else if(type.ToString() =="Admin")
+                {
+                    return RedirectToAction("SuccessfulAdmin");
+                }
             }
             return RedirectToAction("Login");
             

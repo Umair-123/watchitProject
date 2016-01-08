@@ -25,22 +25,13 @@
 	      	</div>
 	      </div>
 	    </div>
+	    
 	    <div class="item">
 	      <div class="bzns-slide">
 	      	<div class="container">
-		      	<img src="Images/movie1.png" class="img-circle bzns-profile">
+		      	<img src="Images/movie1.png" class="img-rectangle">
 		      	<div class="rev-desc">
-		      		<h3>The God Father <span>Great Movie</span></h3>
-		      	</div>
-	      	</div>
-	      </div>
-	    </div>
-	    <div class="item">
-	      <div class="bzns-slide">
-	      	<div class="container">
-		      	<img src="Images/movie1.png" class="img-circle bzns-profile">
-		      	<div class="rev-desc">
-		      		<h3>The God Father <span>Great Movie</span></h3>
+		      		<h3>Suggest Your friends<span> Movies from All Categories</span></h3>
 		      	</div>
 	      	</div>
 	      </div>
@@ -62,9 +53,10 @@
         <div class="jumbotron">
             <h1>Watch It</h1>
                 <p>Its a Place where you can suggest movies of All genres to your friends. Which Movies You are watching these Days?</p>
-                <div class="btn btn-primary btn-lg" >
-                    <p>@Html.ActionLink("Register Yourself","/Account/Register")</p>
-                </div>
+                @*<div class="btn btn-primary btn-lg" >
+                    @Html.ActionLink("Register Yourself","Register","Account")
+                </div>*@
+            <a class="btn btn-primary btn-lg" role="button" href="@Url.Action("Register","Account")">Register Yourself</a>
 
         </div>
     </div>
@@ -72,41 +64,50 @@
         <h1>Genres</h1>
             
                 <div class="row">
-                    <div class="col-sm-4 col-md-4">
-                        <div class="thumbnail">
-                            <img src="Images\Educations.png" alt="..."/>
-                            <div class="caption">
-                                            <p><a href="@Url.Action("MoviesCategories", "Search")" class="btn btn-default" role="button">Action</a></p>
-                            </div>
+                        <div class="col-md-2"></div>
+                        <div class="col-xs-6 col-md-4">
+                            <a href="@Url.Action("MoviesCategories","Search")" class="thumbnail">
+                          <img src="\Images/action.jpg" alt="..." width="234" height="90"/>
+                                <h3 class="text-center">Action</h3>
+                        </a>
+                        </div>
+                        <div class="col-xs-6 col-md-4">
+                        <a href="@Url.Action("MoviesCategories","Search")" class="thumbnail">
+                          <img src="\Images/horror.jpg" alt="..." width="234" height="90"/>
+                            <h3 class="text-center">Horror</h3>
+                        </a>
                         </div>
                     </div>
-                    <div class="col-sm-4 col-md-4">
-                        <div class="thumbnail">
-                            <img src="Images\Educations.png" alt="..."/>
-                            <div class="caption">
-                                            <p><a href="#" class="btn btn-default" role="button">Romantic</a></p>
-                            </div>
+     
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-xs-6 col-md-4">
+                            <a href="@Url.Action("MoviesCategories","Search")" class="thumbnail">
+                          <img src="\Images/documentry.png" alt="..." width="234" height="90"/>
+                                <h3 class="text-center">Documentry</h3>
+                            </a>
                         </div>
-                    </div>
+                        <div class="col-xs-6 col-md-4">
+                        <a href="@Url.Action("MoviesCategories","Search")" class="thumbnail">
+                          <img src="\Images\comedy.jpg" alt="..." width="234" height="90"/>
+                            <h3 class="text-center">Comedy</h3>
+                        </a>
+                        </div>
                     </div>
                     <div class="row">
-                    <div class="col-sm-4 col-md-4">
-                        <div class="thumbnail">
-                            <img src="Images\Educations.png" alt="...">
-                            <div class="caption">
-                                            <p><a href="#" class="btn btn-default" role="button">Comedy</a></p>
-                            </div>
+                        <div class="col-md-2"></div>
+                        <div class="col-xs-6 col-md-4">
+                            <a href="@Url.Action("MoviesCategories","Search")" class="thumbnail">
+                          <img src="\Images/romance.jpg" alt="..." width="234" height="90"/>
+                                <h3 class="text-center">Romance</h3>
+                        </a>
+                        </div>
+                        <div class="col-xs-6 col-md-4">
+                        <a href="@Url.Action("MoviesCategories","Search")" class="thumbnail">
+                          <img src="\Images/romance.jpg" alt="..." width="234" height="90"/>
+                            <h3 class="text-center">Family</h3>
+                        </a>
                         </div>
                     </div>
-                    <div class="col-sm-4 col-md-4">
-                        <div class="thumbnail">
-                            <img src="Images\Educations.png" alt="...">
-                            <div class="caption">
-                                            <p><a href="#" class="btn btn-default" role="button">Horror</a></p>
-                            </div>
-                        </div>
-                    </div>
-                
-                </div>
-                
+               
     </div>

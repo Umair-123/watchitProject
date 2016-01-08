@@ -9,8 +9,10 @@
         <div class="col-md-4">
             </div>
         <div class="col-md-4">
-		<form class="form" action="LoginCheck" method="post">
-			<div class="editor-Label">
+		@*<form class="form" action="LoginCheck" method="post">*@
+            @using(Html.BeginForm("LoginCheck", "Account", FormMethod.Post))
+			{
+                <div class="editor-Label">
                 @Html.LabelFor(Model=>Model.UserName)
 			</div>
             <div class="editor-field">
@@ -22,6 +24,19 @@
             <div class="editor-field">
                 @Html.TextBoxFor(Model=>Model.Password)
 			</div>
+                    <div class="radio">
+                        <label><input type="radio" name="optradio" value="Admin">Admin</label>
+                    </div>
+                    <div class="radio">
+                      <label><input type="radio" name="optradio" value="User">User</label>
+                    </div>
+                    
+            <br/>
+            <div class="checkbox">
+                <label>
+                <input type="checkbox">Remember me 
+                </label>
+            </div>
             @*<label for="email">Email: </label>
             <input class="form-control" id="email" name="email" autofocus required>
 			<label for="password">Password: </label>
@@ -31,7 +46,8 @@
             <br/>
 			<input class="form-control btn btn-lg btn-primary" type="submit" value="Login">
             @Html.ActionLink(" Or Register YourSelf","Register")
-		</form>		
+		@*</form>*@
+            }		
             </div>
         
     </div>
